@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gatchalianpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gatchalianpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gatchalianpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gatchalianpipelinesjavascriptdocker 
+          image: paulconreg.azurecr.io/gatchalianpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
